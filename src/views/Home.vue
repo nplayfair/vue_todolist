@@ -24,6 +24,7 @@ export default {
   methods: {
     deleteTodo(id) {
       // Set todos array to a new one that doesn't match the passed in id
+      /*eslint no-console: "error"*/
       axios.delete(`https://jsonplaceholder.typicode.com/todos/${id}`)
         .then(res => this.todos = this.todos.filter(todo => todo.id !== id))
         .catch(err => console.log(err));
